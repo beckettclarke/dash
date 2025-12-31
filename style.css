@@ -59,7 +59,7 @@ div[dash] button:hover{
   height:100vh;
   position:fixed;
   align-items:center;
-  bottom:-100vw;
+  bottom:-100vh;
   transition:bottom .3s ease;
 }
 #popup,.update-popup{
@@ -113,3 +113,16 @@ a{color:#06c !important;}
 .update-popup{height: 223px !important;}
 .banner{width:282px;}
 #whatsnew i{margin-right:5px;}
+
+
+#eolwarning{
+  background:#ffbb00;
+  padding:15px;
+  position:absolute;
+  top:75px;
+  left:75px;
+  margin:auto;
+  right:75px;
+  border-radius:8px;
+  box-shadow: rgba(255, 187, 0, 0.475) 0px 0px 10px 10px;
+}

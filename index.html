@@ -8,12 +8,18 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ItsFoxDev/fa-turbo/css/all.min.css" />
+<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.0.0/css/all.css" />
 <div dash flex center id="window">
   <h1 id="title" center>dash<span id="period">.</span></h1>
   <span center id="desc">The only web tool you'll need</span>
   <spacer></spacer>
   <div flex center><button onclick="document.getElementById('popup-cont').style.bottom='0px';" id="install"><i class="far fa-arrow-down-to-line"></i> Install</button></div>
+  <div id="eolwarning">
+    <b><i class="fas fa-warning"></i> dash is no longer maintained.</b>
+    <br>
+    While most features will likely continue to work, things may not work as intended and no new changes will be made.
+
+  </div>
 </div>
 <div dash flex center id="popup-cont">
   <div id="popup">
@@ -32,11 +38,12 @@
   <div class="update-popup">
     <h2><span style="font-weight:500;"><i class="fas fa-check" style="margin-right:5px"></i>Up to date</span></h2>
     <span class="banner"><span block style="width:100%;font-weight:600;"><i class="far fa-bug"></i> Found a bug?</span>
-      If you've found a bug or something isn't working, please <a href="https://forms.gle/mRZP8rdAAC7xa1Nk6">let us know</a>, or <a href="https://discord.gg/q323sRB5FD">join the Discord</a> for further support.
+      If you've found a bug or something isn't working, please <a href="https://forms.gle/mRZP8rdAAC7xa1Nk6">let us know</a>
+      <!-- , or <a href="https://discord.gg/q323sRB5FD">join the Discord</a> for further support. -->
     </span>
     <span style="font-size:18.5px;"><b>dash.</b> is up to date!</span>
     <span style="font-size:12px;">Version <span class="latestversion">?</span></span>
-    <button onclick="document.getElementById('uptodate').style.bottom='-100vw';" style="margin-top:5px;font-size:15px;padding: 4.5px 0px;width: 72px;"><i class="far fa-check"></i> Done</button>
+    <button onclick="document.getElementById('uptodate').style.bottom='-100vh';" style="margin-top:5px;font-size:15px;padding: 4.5px 0px;width: 72px;"><i class="far fa-check"></i> Done</button>
   </div>
 </div>
 <div dash flex center id="oldversion" class="update-cont">
@@ -47,7 +54,17 @@
     </span>
     <span style="font-size:18.5px;height: 25px;">Replace your <b>dash.</b> with <a class="bm">dash.</a></span>
     <span style="font-size:12px;">Version <span class="currentversion">?</span><i style="margin:0px 5px;" class="far fa-arrow-right"></i><span class="latestversion">?</span></span>
-    <button onclick="document.getElementById('oldversion').style.bottom='-100vw';" style="margin-top:5px;font-size:15px;padding: 4.5px 0px;width: 72px;"><i class="far fa-check"></i> Done</button>
+    <button onclick="document.getElementById('oldversion').style.bottom='-100vh';" style="margin-top:5px;font-size:15px;padding: 4.5px 0px;width: 72px;"><i class="far fa-check"></i> Done</button>
+  </div>
+</div>
+<div dash flex center id="betaversion" class="update-cont">
+  <div class="update-popup">
+    <h2><span style="font-weight:500;"><i class="fas fa-vial" style="margin-right:5px"></i>Beta Installed</span></h2>
+    <span class="banner">
+      <span id="whatsnew">The version you are running is newer than the current latest version. You are likely running a developer beta.</span>
+    </span>
+    <span style="font-size:12px;">Latest  is version <span class="latestversion">?</span>, You are on  version <span class="currentversion">?</span></span>
+    <button onclick="document.getElementById('betaversion').style.bottom='-100vh';" style="margin-top:5px;font-size:15px;padding: 4.5px 0px;width: 72px;"><i class="far fa-check"></i> Done</button>
   </div>
 </div>
 <script  src="./sethref.js"></script>
